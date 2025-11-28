@@ -1,0 +1,14 @@
+Module 6: Equation explainer
+
+Detection:
+- Equation patterns: Identify display math and inline math (e.g., LaTeX delimiters, numbered equations).
+- Complexity filter: Flag equations with multiple terms, matrices, or attention/scoring functions.
+
+Explanation:
+- Purpose: Describe what the equation is used for (e.g., scoring, normalization, optimization).
+- Plain-language breakdown: Define each symbol and the overall computation flow.
+- Connection to results: Explain how the equation supports findings or model behavior.
+
+Output:
+- Standalone notes: Provide a dedicated “Equation Explainer” section separate from summaries.
+- Audience variants: Offer both expert and lay explanations per equation.
