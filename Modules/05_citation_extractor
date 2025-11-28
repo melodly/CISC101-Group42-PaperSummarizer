@@ -1,0 +1,13 @@
+Module 5: Citation extractor
+
+Detection:
+- In-text citations: Identify patterns like “[12]”, “(Smith et al., 2017)”, numeric superscripts, and reference-style anchors.
+- Separation: Extract citations and map them to the references section when available.
+
+Summarization:
+- Context linkage: Summarize what each citation supports (method, dataset, prior work).
+- Output: Provide a separate list of citations with brief roles, distinct from main summaries.
+
+Integration:
+- No mixing: Do not include citations inside summary bullets or table cells.
+- Traceability: Maintain citation-to-section mapping for audits.
