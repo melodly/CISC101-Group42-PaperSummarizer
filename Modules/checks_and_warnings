@@ -1,0 +1,6 @@
+Checks & warnings
+- Missing sections: Clearly list any provided sections not found in the paper text.
+- Empty/short sections: Flag sections with insufficient content (<50 words).
+- Ambiguous headings: Note any headings that could not be confidently aligned.
+- Over-limit text: Indicate if any section exceeded the 200-word cap and was trimmed.
+- Citation/Equation gaps: Report if citations or equations were detected but not explainable due to missing context.
