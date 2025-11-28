@@ -1,1 +1,16 @@
+### **Module 1 — Intake & Setup** 
 
+Normalize sections:
+- Parse headings: Detect actual section titles and map them to the provided list.
+- Canonicalize names: Standardize casing and numbering (e.g., “1. Introduction” → “Introduction”).
+- Align structure: Handle nested subsections; collapse or roll-up if needed.
+
+Detect issues:
+- Missing sections: Mark sections present in the list but absent in text.
+- Short sections: Flag sections with <50 words.
+- Empty content: Identify headings with no substantive text.
+
+Metadata setup:
+- Audience: Default to “Lay” if not provided.
+- Limits: Set per-section word budgets and bullet counts.
+- Chunking plan: Pre-plan splits for very long sections.
