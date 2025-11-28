@@ -1,0 +1,17 @@
+Module 4: Rendering & refinement
+
+Final summary structure:
+- Paper summary: 6–10 bullets covering motivation, method, results, and limitations.
+- Section-by-section table: One row per section with required bullet counts.
+
+Formatting consistency:
+- Lead-ins: Use bold lead-in labels for bullets where helpful (e.g., “Method,” “Result”).
+- Tables: Keep to essential columns; no citations inside cells.
+
+Variants:
+- Expert summary: Precise terminology and details; still <200 words per section.
+- Lay summary: Plain language, brief analogies, term definitions inline.
+
+Quality pass:
+- Deduplication: Remove redundant points across sections.
+- Constraint enforcement: Re-check word counts, bullet counts, and warnings.
