@@ -1,16 +1,46 @@
+## Change Log (Nov 2025)
+- Added `evidence_mode = "strict"` to prevent unsupported claims.
+- Added explicit instructions for strict evidence summaries and missing-info messages.
+- Added standardized warnings for missing, empty, and very short sections.
+- Preserved original guardrails while strengthening evidence and hallucination control.
+
+---
+
 Module 3: Guardrails
 
-Missing/empty sections:
+### Missing / Empty Sections
 - Warnings: Add explicit notes for missing or empty sections in “Checks & Warnings.”
 - No invention: Do not fabricate content for absent sections.
+- Standardized message (new):
+  - “Section skipped: no usable text was provided.”
 
-Short sections (<50 words):
+### Short Sections (<50 words)
 - Flag: Mark and keep summaries minimal; indicate limited content.
+- Standardized message (new):
+  - “Section very short: summary may be incomplete.”
 
-Hallucination mitigation:
+---
+
+### Strict Evidence Mode (New Requirement)
+
+Introduce a flag:
+
+- **`evidence_mode`** ∈ {"strict", "default"}
+
+When `evidence_mode = "strict"`:
+- Only include claims, equations, results, and concepts that appear **explicitly** in the provided text.
+- Do not infer missing details, interpretations, or context.
+- If the source text lacks enough information to produce a summary, output:
+  - “The source text does not provide enough detail to summarize this section in strict evidence mode.”
+
+---
+
+### Hallucination Mitigation (Existing + Reinforced)
 - Source tethering: Each bullet must be traceable to the section’s text.
 - Term validation: Avoid undefined acronyms; define or remove if unsupported.
 
-Long-paper chunking:
+---
+
+### Long-Paper Chunking (Existing)
 - Segment: Break sections into logical sub-chunks (e.g., paragraphs) before summarizing.
 - Aggregate: Combine chunk summaries into final bullets while preserving constraints.
