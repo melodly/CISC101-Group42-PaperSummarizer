@@ -1,0 +1,16 @@
+Module 3: Guardrails
+
+Missing/empty sections:
+- Warnings: Add explicit notes for missing or empty sections in “Checks & Warnings.”
+- No invention: Do not fabricate content for absent sections.
+
+Short sections (<50 words):
+- Flag: Mark and keep summaries minimal; indicate limited content.
+
+Hallucination mitigation:
+- Source tethering: Each bullet must be traceable to the section’s text.
+- Term validation: Avoid undefined acronyms; define or remove if unsupported.
+
+Long-paper chunking:
+- Segment: Break sections into logical sub-chunks (e.g., paragraphs) before summarizing.
+- Aggregate: Combine chunk summaries into final bullets while preserving constraints.
