@@ -1,0 +1,14 @@
+Module 2: Section loop
+
+Extraction:
+- Scope capture: Extract text for the current section, excluding references and captions unless explicitly part of the section.
+- Key signal detection: Identify objectives, methods, results, limitations.
+
+Summarization:
+- Bullet drafting: Create three bullets (four for abstract/conclusion) with unique points.
+- Language level: Generate expert and lay variants for later rendering.
+
+Constraint checks:
+- Length: <200 words per section.
+- Uniqueness: No repeated bullets; each expresses a distinct idea.
+- Factuality: Match phrasing to original text; avoid external claims.
