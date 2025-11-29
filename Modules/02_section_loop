@@ -1,39 +1,14 @@
-## Change Log (Nov 2025)
-- Added `summary_level` variable with two modes: "short" and "detailed".
-- Added conditional behaviour in the summarization step to produce either compact summaries or detailed summaries with key-point lists.
-- Updated section-loop instructions to incorporate summary-level branching while preserving existing extraction, summarization, and constraint rules.
-
----
-
 Module 2: Section loop
 
-### Extraction
+Extraction:
 - Scope capture: Extract text for the current section, excluding references and captions unless explicitly part of the section.
-- Key signal detection: Identify objectives, methods, results, and limitations.
+- Key signal detection: Identify objectives, methods, results, limitations.
 
-### Summarization
-
-Introduce a variable:
-
-- **`summary_level`** ∈ {"short", "detailed"}
-
-During the section-processing loop:
-
-**If `summary_level = "short"`**
-- Produce a **1–2 sentence compact summary** capturing the section’s core idea.
-- No bullet list is generated in this mode.
-
-**If `summary_level = "detailed"`**
-- Produce:
-  - A **short paragraph** (3–5 sentences) summarizing key ideas, and
-  - A **bullet list of 3–5 key points**, each drawn directly from the section’s content.
-- Bullet points must represent **distinct** ideas and align with extracted signals (objectives, methods, results, limitations).
-
-Additional summarization rules (preserved from original module):
-- Bullet drafting: When bullets are required (e.g., detailed mode), ensure each point is unique and non-overlapping.
+Summarization:
+- Bullet drafting: Create three bullets (four for abstract/conclusion) with unique points.
 - Language level: Generate expert and lay variants for later rendering.
 
-### Constraint checks
-- Length: <200 words per section (applies to paragraph + bullets combined).
+Constraint checks:
+- Length: <200 words per section.
 - Uniqueness: No repeated bullets; each expresses a distinct idea.
 - Factuality: Match phrasing to original text; avoid external claims.
